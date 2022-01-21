@@ -13,7 +13,7 @@ const Dashboard = () => {
   const handleLoadMore = () => {
     console.log('Load more...')
   }
-  
+
   return (
     <div className="container">
      <PageHeader title="Dashboard" subTitle="Wednesday, 23rd December 2021"/>

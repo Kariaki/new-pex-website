@@ -6,18 +6,21 @@ export const totalCounts = [
     name: "Total orders",
     count: 345,
     icon: <MdLibraryBooks />,
+    url: "/orders",
   },
   {
     id: 2,
     name: "Total customers",
     count: 480,
     icon: <IoMdPeople />,
+    url: "/customers",
   },
   {
     id: 3,
     name: "Total businesses",
     count: 50,
     icon: <IoMdBusiness />,
+    url: "/businesses",
   },
 ];
 
