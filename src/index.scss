@@ -1,0 +1,21 @@
+//Utils
+@import "./styles/utils/breakpoints";
+@import "./styles/utils/variables";
+@import "./styles/utils/utilities";
+
+// Base
+@import "./styles/base/reset";
+
+//Components
+@import "./styles/components/header";
+@import "./styles/components/pageheader";
+@import "./styles/components/countscard";
+@import "./styles/components/fivecolumns";
+@import "./styles/components/mealcard";
+
+//Pages
+@import "./styles/pages/dashboard";
+@import "./styles/pages/orders";
+@import "./styles/pages/customers";
+@import "./styles/pages/businesses";
+@import "./styles/pages/home";

@@ -1,0 +1,70 @@
+.header {
+  .mobile_menu-icon {
+    padding: 10px 20px;
+  }
+
+  .menu-icon {
+    margin-top: 10px;
+  }
+
+  .nav_brand {
+    color: $black;
+    text-align: center;
+    margin: 30px auto;
+    font-size: 26px;
+    font-weight: 900;
+  }
+
+  .nav_links {
+    z-index: 1;
+    width: 50vw;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    bottom: 0;
+    background-color: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+
+    &.active {
+      left: 0;
+    }
+
+    .nav-link {
+      margin-bottom: 20px;
+      padding: 10px;
+      display: flex;
+      color: $black;
+      align-items: center;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $secondary-color;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  ion-icon {
+    color: $black;
+    margin-right: 10px;
+  }
+
+  @include lg {
+    .mobile_menu-icon {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+    .nav_links {
+      background-color: $primary-color;
+      width: 20vw;
+      left: 0;
+      padding: 0 40px;
+    }
+  }
+}

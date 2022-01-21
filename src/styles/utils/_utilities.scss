@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  padding: 10px 20px;
+  width: 100vw;
+
+  @include lg {
+    width: 78vw;
+    left: 20vw;
+  }
+}
+
+.content {
+  margin-top: 10px;
+  @include lg {
+    margin-top: 20px;
+  }
+}
+
+.btn {
+  color: $black;
+  background-color: $secondary-color;
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
