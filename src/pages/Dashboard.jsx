@@ -24,7 +24,7 @@ const Dashboard = () => {
               <CountsCard card={card} key={card.id}/>
             ))}
           </div>
-          <div className="dashboard-table">
+          <div className="dashboard-table shadow">
             <div>
               <h4>Recent orders</h4>
               <button className="btn" onClick={handleViewAll}>View all</button>
@@ -32,7 +32,7 @@ const Dashboard = () => {
             <FiveColums col1="Order" col2="Customer" col3="Amount" col4="Time" col5="Status" data={dashboardData}/>
           </div>
        </div>
-       <div className="dashboard_right-content">
+       <div className="dashboard_right-content shadow">
          <h4>Most ordered Meal</h4>
          {mostOrderedMeal.map(meal => (
            <MealCard meal={meal} key={meal.id}/>

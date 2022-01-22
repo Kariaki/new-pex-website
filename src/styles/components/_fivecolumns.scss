@@ -4,11 +4,27 @@
   overflow-x: scroll;
 
   table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 15px;
     width: 100%;
+
+    .hr {
+      width: 1000%;
+      height: 2px;
+      background-color: $secondary-color;
+    }
 
     .table_header {
       border-bottom: 2px solid $secondary-color;
+    }
+
+    .clickable {
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-color;
+        padding: 10px 0;
+      }
     }
 
     td,
@@ -33,7 +49,7 @@
         font-size: 20px;
       }
       td {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }

@@ -1,0 +1,11 @@
+.form-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: $secondary-color;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

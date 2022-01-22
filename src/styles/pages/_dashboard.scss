@@ -17,8 +17,6 @@
 
     .dashboard-table {
       background-color: $white;
-      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       padding: 20px 10px;
       border-radius: 10px;
       div {
@@ -31,8 +29,6 @@
 
   .dashboard_right-content {
     background-color: $white;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 15px;
     width: 100%;
     margin: 20px 0;

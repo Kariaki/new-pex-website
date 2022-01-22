@@ -39,10 +39,14 @@
       color: $black;
       align-items: center;
       text-decoration: none;
+      border-radius: 20px;
 
       &:hover {
         background-color: $secondary-color;
-        border-radius: 15px;
+      }
+
+      &.active-color {
+        background-color: $secondary-color;
       }
     }
   }

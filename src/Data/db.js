@@ -125,3 +125,381 @@ export const mostOrderedMeal = [
     location: "Kilmanjaro",
   },
 ];
+
+export const customersData = [
+  {
+    id: 1,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 2,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 3,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 4,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 5,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 6,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 7,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 8,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 9,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+
+  {
+    id: 10,
+    col1: "Jane Doe",
+    col2: 9034564356,
+    col3: "janedoe@gmail.com",
+    col4: "No 35, Onopa street",
+    col5: 45,
+  },
+];
+
+export const verifiedBusinessData = [
+  {
+    id: 1,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+
+  {
+    id: 2,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+
+  {
+    id: 3,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+
+  {
+    id: 4,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+
+  {
+    id: 5,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+
+  {
+    id: 6,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+
+  {
+    id: 7,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+
+  {
+    id: 8,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+
+  {
+    id: 9,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: 45,
+    col5: 45,
+  },
+];
+
+export const unverifiedBusinessData = [
+  {
+    id: 1,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+
+  {
+    id: 2,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+
+  {
+    id: 3,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+
+  {
+    id: 4,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+
+  {
+    id: 5,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+
+  {
+    id: 6,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+
+  {
+    id: 7,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+
+  {
+    id: 8,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+
+  {
+    id: 9,
+    col1: "Crunches Inc",
+    col2: "janedoe@gmail.com",
+    col3: "No 35, Onopa street",
+    col4: "Verify",
+  },
+];
+
+export const orders = [
+  [
+    {
+      id: 1,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+
+    {
+      id: 2,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+  ],
+  [
+    {
+      id: 1,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+
+    {
+      id: 2,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+  ],
+  [
+    {
+      id: 1,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+
+    {
+      id: 2,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+  ],
+  [
+    {
+      id: 1,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+
+    {
+      id: 2,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+  ],
+  [
+    {
+      id: 1,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+
+    {
+      id: 2,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+  ],
+  [
+    {
+      id: 1,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+
+    {
+      id: 2,
+      orderNumber: 222,
+      date: "23rd December, 2021",
+      itemsNumber: 5,
+      name: "Rice",
+      price: 2000,
+      qty: 1,
+    },
+  ],
+];

@@ -9,13 +9,21 @@
 //Components
 @import "./styles/components/header";
 @import "./styles/components/pageheader";
+
+//Cards
+@import "./styles/components/orderlist";
 @import "./styles/components/countscard";
-@import "./styles/components/fivecolumns";
 @import "./styles/components/mealcard";
+@import "./styles/components/ordercard";
+
+//Tables
+@import "./styles/components/fivecolumns";
+@import "./styles/components/fourcolumns";
+
+//Modals
+@import "./styles/components/ordermodal";
 
 //Pages
 @import "./styles/pages/dashboard";
 @import "./styles/pages/orders";
-@import "./styles/pages/customers";
-@import "./styles/pages/businesses";
 @import "./styles/pages/home";

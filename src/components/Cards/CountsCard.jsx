@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const CountsCard = ({card}) => {
   return (
-    <Link to={`${card.url}`} className="card_container">
+    <Link to={`${card.url}`} className="card_container shadow">
       <div className='card_icon'>{card.icon}</div>
       <div className="card_details">
         <h4>{card.count}</h4>

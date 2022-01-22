@@ -22,6 +22,98 @@
   border: none;
   outline: none;
   padding: 8px 20px;
-  border-radius: 15px;
+  border-radius: 20px;
   cursor: pointer;
+}
+
+.shadow {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.pagination {
+  width: 90%;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: 1px solid $secondary-color;
+  padding: 8px;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.right-btn {
+  margin-left: 10px;
+}
+
+.container_content {
+  padding: 20px;
+  border-radius: 15px;
+
+  div {
+    margin-bottom: 10px;
+
+    h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.nav {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: transparent;
+    transition: all 0.6s ease-in-out;
+
+    &.active-color {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.order_container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.modal-container {
+  background-color: yellow;
+  color: red;
 }
