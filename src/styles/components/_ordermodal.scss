@@ -1,0 +1,54 @@
+.order_modal {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-heading {
+    display: flex;
+    align-items: center;
+
+    .details {
+      margin-right: 40px;
+
+      &:first-child {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-delivery-detail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    & > * {
+      margin-right: 20px;
+
+      & > h5 {
+        font-size: 16px;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &-list-container {
+    height: 220px;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    p > span {
+      font-weight: 900;
+      font-size: 18px;
+    }
+  }
+
+  & > * {
+    margin-bottom: 15px;
+  }
+}

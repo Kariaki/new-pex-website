@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../Button";
 import OrderModal from "../Modals/OrderModal";
 import OrderList from "./OrderList";
 
@@ -22,7 +23,7 @@ const OrderCard = ({orders, status}) => {
         <span><h5 className="details">Order #{ord.orderNumber}</h5><span className="order_card-date">{ord.date}</span></span>
         <h5 className="items">{ord.itemsNumber}</h5>
       </div>
-      <div className="order_items">
+      <div className="order_items custom-scrollbar">
         <OrderList order={order}/>
         <OrderList order={order}/>
         <OrderList order={order}/>
@@ -30,8 +31,7 @@ const OrderCard = ({orders, status}) => {
       <hr />
       <div className="order_total">
         <h5>#7000</h5>
-        {/* <button onClick={() => setOpen(true)}>{status}</button> */}
-        <button onClick={() => handleOrderModal(order)}>{status}</button>
+        <Button text={status} bgColor="rgb(224,209,92)" color="black"  onClick={() => handleOrderModal(order)}/>
       </div>
     </div>
       ))

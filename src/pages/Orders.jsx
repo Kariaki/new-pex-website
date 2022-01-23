@@ -6,7 +6,7 @@ import CancelledOrders from '../components/Tabs/CancelledOrders';
 import { orders } from '../Data/db';
 
 const Orders = () => {
-console.log(orders)
+// console.log(orders)
   const [activeTab, setActiveTab] = useState("tab1");
 
    const handleTab1 = () => {

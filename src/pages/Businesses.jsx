@@ -25,7 +25,7 @@ const Businesses = () => {
 
   return (
     <div className="container">
-      <PageHeader title="Businesses" subTitle="Manage your partner businesses"/>
+      <PageHeader title="Vendors" subTitle="Manage your partner vendors"/>
       <div className="container_content content shadow bg-white">
         <ul className="nav">
           <li className={activeTab === "tab1" ? "active active-color" : ""} onClick={handleTab1}>Verified</li>

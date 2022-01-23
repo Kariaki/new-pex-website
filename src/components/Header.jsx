@@ -20,7 +20,7 @@ const Header = () => {
           <Link to="/dashboard" className='nav-link' onClick={handleClick}><ion-icon name="grid-outline"></ion-icon> Dashboard</Link>
           <Link to="/orders" className='nav-link' onClick={handleClick}><ion-icon name="clipboard-outline"></ion-icon> Orders</Link>
           <Link to="/customers" className='nav-link' onClick={handleClick}><ion-icon name="file-tray-full-outline"></ion-icon> Customers</Link>
-          <Link to="/businesses" className='nav-link' onClick={handleClick}><ion-icon name="folder-outline"></ion-icon> Businesses</Link>
+          <Link to="/businesses" className='nav-link' onClick={handleClick}><ion-icon name="folder-outline"></ion-icon> Vendors</Link>
         </nav>
 
       </header>
