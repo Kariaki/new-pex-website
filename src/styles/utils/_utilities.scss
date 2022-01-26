@@ -114,7 +114,7 @@
   }
 }
 
-.order_container {
+.grid_container {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -157,4 +157,37 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.vendor-card {
+  background-color: $white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background-repeat: 50%;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  color: $black;
+}
+
+.login_link {
+  color: $secondary-color;
+
+  &:hover {
+    color: $black;
+  }
 }

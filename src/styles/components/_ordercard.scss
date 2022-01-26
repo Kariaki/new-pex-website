@@ -20,22 +20,45 @@
   }
 
   .order_items {
-    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .order_item {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 10px;
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+
+      .order_detail {
+        h5 {
+          word-wrap: break-word;
+          white-space: pre-wrap;
+          word-break: break-word;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .order_qty {
+    p {
+      font-size: 12px;
+    }
   }
 
   .order_total {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0;
-
-    button {
-      cursor: pointer;
-      outline: none;
-      border: none;
-      background-color: $secondary-color;
-      padding: 5px 10px;
-      border-radius: 20px;
-    }
+    margin: 10px 0 5px 0;
   }
 }

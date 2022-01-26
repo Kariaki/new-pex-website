@@ -40,14 +40,6 @@
       align-items: center;
       text-decoration: none;
       border-radius: 20px;
-
-      &:hover {
-        background-color: $secondary-color;
-      }
-
-      &.active-color {
-        background-color: $secondary-color;
-      }
     }
   }
 
@@ -71,4 +63,8 @@
       padding: 0 40px;
     }
   }
+}
+
+.active {
+  background-color: $secondary-color;
 }
