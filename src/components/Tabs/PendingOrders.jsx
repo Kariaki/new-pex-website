@@ -1,10 +1,45 @@
+import React,{ useState, useEffect } from "react";
 import OrderCard from "../Cards/OrderCard";
 
-const PendingOrders = ({orders}) => {
+import { db } from "../../firebase-config";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
+
+const PendingOrders = () => {
+  const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [err, setErr] = useState('');
+
+  useEffect(() => {
+  setLoading(true)
+  try {
+    const data = query(collection(db, 'orders'), where('orderStates', '==', 'PENDING'))
+    onSnapshot(data, (querySnapshot) => {
+    setOrders(querySnapshot.docs.map(doc => ({
+      data: doc.data()
+    })))
+    setLoading(false);
+  })
+  } catch (error) {
+    setErr(error.message)
+    setLoading(false)
+  }  
+},[])
+
+if(loading){
+  return <p>Loading...</p>
+}
+
+if(err){
+  return <p>{err}</p>
+}
 
   return (
-    <div className="order_container">
-        <OrderCard orders={orders} status="Pending"/>
+    <div className="grid_container grid_size">
+      {orders.map(order => (
+        <React.Fragment>
+          <OrderCard order={order} status="Pending"/>
+        </React.Fragment>
+      ))}
     </div>
     );
 };
