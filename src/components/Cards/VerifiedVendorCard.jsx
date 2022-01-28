@@ -12,10 +12,6 @@ const VerifiedVendorCard = ({data, click, setClickId}) => {
       <h4>{data.data.name}</h4>
       <div className="verified_vendor-card-offers">
           <div>
-            <span>Menu</span>
-            <span>7</span>
-          </div>
-          <div>
             <span>Meals</span>
             <span>35</span>
           </div>
