@@ -45,7 +45,7 @@ const UnverifiedVendors = ({unverifiedVendors}) => {
           <UnverifiedVendorCard data={vendors} click={handleVerificationModal} setClickId={setClickId}/>
           </React.Fragment>
         ))}
-    </div>
+        </div>
     </React.Fragment>
   );
 };

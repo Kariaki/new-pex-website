@@ -2,7 +2,7 @@ import React,{ useState, useEffect } from "react";
 import OrderCard from "../Cards/OrderCard";
 
 import { db } from "../../firebase-config";
-import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { collection, query, where, orderBy, onSnapshot } from "firebase/firestore";
 
 const PendingOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -12,7 +12,7 @@ const PendingOrders = () => {
   useEffect(() => {
   setLoading(true)
   try {
-    const data = query(collection(db, 'orders'), where('orderStates', '==', 'PENDING'))
+    const data = query(collection(db, 'orders'), where('orderStates', '==', 'PENDING'), orderBy("date", "desc"))
     onSnapshot(data, (querySnapshot) => {
     setOrders(querySnapshot.docs.map(doc => ({
       data: doc.data()
@@ -24,6 +24,7 @@ const PendingOrders = () => {
     setLoading(false)
   }  
 },[])
+
 
 if(loading){
   return <p>Loading...</p>
