@@ -1,4 +1,5 @@
-const FiveColums = ({col1, col2, col3, col4, data, click}) => {
+const FiveColums = ({col1, col2, col3, col4, data}) => {
+
   return (
     <div className="table_container">
       <table>
@@ -11,10 +12,10 @@ const FiveColums = ({col1, col2, col3, col4, data, click}) => {
         <div className="hr"></div>
         {data.map(row => (
           <tr>
-            <td>{row.col1}</td>
-            <td>{row.col2}</td>
-            <td>{row.col3}</td>
-            <td onClick={click} className="form-btn">{row.col4}</td>
+            <td>{row.data.name}</td>
+            <td>{row.data.contactDetails.phone}</td>
+            <td>{row.data.contactDetails.email ? row.data.contactDetails.email : 'johndoe@gmail.com'}</td>
+            <td>{row.data.deliveryAddress}</td>
           </tr>
         ))}
       </table>
