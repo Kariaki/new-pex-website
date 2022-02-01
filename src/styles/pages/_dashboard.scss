@@ -1,71 +1,25 @@
 .dashboard_content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  padding: 20px;
 
-  .dashboard_left-content {
-    display: flex;
-    flex-direction: column;
-
-    .dashboard-cards {
-      margin: 0 0 30px 0;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
-    }
-
-    .dashboard-table {
-      background-color: $white;
-      padding: 20px 10px;
-      border-radius: 10px;
-      div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-  }
-
-  .dashboard_right-content {
-    background-color: $white;
-    border-radius: 15px;
-    width: 100%;
-    margin: 20px 0;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-
-    h4 {
-      font-weight: 800;
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    button {
-      align-self: center;
-      margin: 10px auto;
-    }
-  }
-
-  @include lg {
-    flex-direction: row;
-    align-items: flex-start;
-
-    .dashboard_left-content {
+  &-orders-card {
+    .title {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       padding: 0 20px;
-      flex: 2;
 
-      .dashboard-cards {
-        gap: 30px;
+      h3 {
+        font-weight: 400;
+        font-size: 16px;
       }
-    }
 
-    .dashboard_right-content {
-      width: 280px;
-      margin: 0 auto;
+      .date_picker {
+        border: none;
+        outline: 1px solid gray;
+        padding: 10px;
+        border-radius: 5px;
+      }
     }
   }
 }
