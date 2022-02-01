@@ -1,35 +1,69 @@
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 
 //Pages
-import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Orders from "./pages/Orders";
 import Customers from "./pages/Customers";
-import Businesses from "./pages/Businesses";
+import Vendors from "./pages/Vendors";
 
 //Components
-import Header from "./components/Header";
+import PrivateRoute from "./components/PrivateRoute";
+import ResetPassword from "./pages/ResetPassword";
+import { useAuth } from "./contexts/authContext";
+
+import { db } from "./firebase-config";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
 
 function App() {
+  const { user } = useAuth();
+  const [vendors, setVendors] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [err, setErr] = useState("");
+
+  useEffect(() => {
+    setLoading(true);
+    try {
+      const data = query(
+        collection(db, "vendors"),
+        where("verified", "==", true)
+      );
+      onSnapshot(data, (querySnapshot) => {
+        setVendors(
+          querySnapshot.docs.map((doc) => ({
+            data: doc.data(),
+          }))
+        );
+        setLoading(false);
+      });
+    } catch (error) {
+      setErr(error.message);
+      setLoading(false);
+    }
+  }, []);
+
   return (
     <div className="App">
-      <Header />
       <Switch>
         <Route path="/" exact>
-          <Home />
+          {!user ? <Login /> : <Dashboard />}
         </Route>
-        <Route path="/dashboard">
-          <Dashboard />
+        <Route path="/password-reset">
+          <ResetPassword />
         </Route>
-        <Route path="/orders">
+        <PrivateRoute path="/dashboard">
+          <Dashboard vendors={vendors} err={err} loading={loading} />
+        </PrivateRoute>
+        <PrivateRoute path="/orders">
           <Orders />
-        </Route>
-        <Route path="/customers">
+        </PrivateRoute>
+        <PrivateRoute path="/customers">
           <Customers />
-        </Route>
-        <Route path="/businesses">
-          <Businesses />
-        </Route>
+        </PrivateRoute>
+        <PrivateRoute path="/vendors">
+          <Vendors vendors={vendors} err={err} loading={loading} />
+        </PrivateRoute>
       </Switch>
     </div>
   );

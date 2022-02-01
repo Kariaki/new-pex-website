@@ -9,19 +9,18 @@
 //Components
 @import "./styles/components/header";
 @import "./styles/components/pageheader";
+@import "./styles/components/autherror";
 
 //Cards
-@import "./styles/components/orderlist";
-@import "./styles/components/countscard";
-@import "./styles/components/mealcard";
 @import "./styles/components/ordercard";
+@import "./styles/components/verifiedvendorcard";
+@import "./styles/components/admincard";
+@import "./styles/components/dashboardcard";
 
 //Tables
-@import "./styles/components/fivecolumns";
 @import "./styles/components/fourcolumns";
 
 //Modals
-@import "./styles/components/ordermodal";
 @import "./styles/components/verifiedvendormodal";
 @import "./styles/components/verificationmodal";
 @import "./styles/components/confirmationmodal";
@@ -29,4 +28,3 @@
 //Pages
 @import "./styles/pages/dashboard";
 @import "./styles/pages/orders";
-@import "./styles/pages/home";
