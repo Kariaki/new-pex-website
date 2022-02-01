@@ -12,7 +12,7 @@ const PendingOrders = () => {
   useEffect(() => {
   setLoading(true)
   try {
-    const data = query(collection(db, 'orders'), where('orderStates', '==', 'PENDING'), orderBy("date", "desc"))
+    const data = query(collection(db, 'orders'), where('orderStates', '==', 'PENDING'))
     onSnapshot(data, (querySnapshot) => {
     setOrders(querySnapshot.docs.map(doc => ({
       data: doc.data()
@@ -38,7 +38,7 @@ if(err){
     <div className="grid_container grid_size">
       {orders.map(order => (
         <React.Fragment>
-          <OrderCard order={order} status="Pending"/>
+          <OrderCard order={order} key={order.id} status="Pending"/>
         </React.Fragment>
       ))}
     </div>

@@ -41,7 +41,7 @@ const UnverifiedVendors = ({unverifiedVendors}) => {
         {vendor && <VerificationModal open={open} setOpen={setOpen} vendor={vendor} clickId={clickId} />}
         <div className="grid_container grid_size">
         {unverifiedVendors && unverifiedVendors.map(vendors => (
-          <React.Fragment>
+          <React.Fragment key={vendors.id}>
           <UnverifiedVendorCard data={vendors} click={handleVerificationModal} setClickId={setClickId}/>
           </React.Fragment>
         ))}

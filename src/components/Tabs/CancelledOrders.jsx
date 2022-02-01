@@ -13,7 +13,7 @@ const CancelledOrders = () => {
   useEffect(() => {
   setLoading(true)
   try {
-    const data = query(collection(db, 'orders'), where('orderStates', '==', 'CANCELED'), orderBy("date", "desc"))
+    const data = query(collection(db, 'orders'), where('orderStates', '==', 'CANCELED'))
     onSnapshot(data, (querySnapshot) => {
     setOrders(querySnapshot.docs.map(doc => ({
       data: doc.data()
@@ -38,7 +38,7 @@ if(err){
     <div className="grid_container grid_size">
       {orders && orders.map(order => (
         <React.Fragment>
-          <OrderCard order={order} status="Cancelled" />
+          <OrderCard order={order} key={order.id} status="Cancelled" />
         </React.Fragment>
       ))}
     </div>

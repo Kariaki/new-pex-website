@@ -13,7 +13,7 @@ const FulfilledOrders = () => {
   useEffect(() => {
   setLoading(true)
   try {
-    const data = query(collection(db, 'orders'), where('orderStates', '==', 'PROCESSED'), orderBy("date", "desc"))
+    const data = query(collection(db, 'orders'), where('orderStates', '==', 'PROCESSED'))
     onSnapshot(data, (querySnapshot) => {
     setOrders(querySnapshot.docs.map(doc => ({
       data: doc.data()
@@ -38,7 +38,7 @@ if(err){
     <div className="grid_container grid_size">
       {orders.map(order => (
         <React.Fragment>
-          <OrderCard order={order} status="Open"/>
+          <OrderCard order={order} key={order.id} status="Open"/>
         </React.Fragment>
       ))}
     </div>
