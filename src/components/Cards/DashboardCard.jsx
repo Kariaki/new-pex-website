@@ -4,14 +4,14 @@ import moment from 'moment';
 import { db } from '../../firebase-config';
 import { collection, query, onSnapshot, where } from "firebase/firestore";
 
-const DashboardCard = ({vendor: {data}}) => {
-  let now = new Date();
-  const dateString = moment(now).format('YYYY-MM-DD');
+const DashboardCard = ({vendor: {data}, startDate}) => {
+  
+  const dateString = moment(startDate).format('YYYY-MM-DD');
 
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    const res = query(collection(db, 'orders'), where('vendorId', "==", data.id), where('date', '==', dateString))// orderBy('created', 'desc'))
+    const res = query(collection(db, 'orders'), where('orderStates', '==', 'PROCESSED'), where('vendorId', "==", data.id), where('date', '==', dateString));
     onSnapshot(res, (querySnapshot) => {
     setOrders(querySnapshot.docs.map(doc => ({
       data: doc.data()
@@ -24,9 +24,8 @@ const totalQuantity = orders.reduce((acc, curr)=> acc + curr.data.quantity, 0);
 
   return (
     <React.Fragment>
-      {orders.map(order => (
+      {orders && orders.map(order => (
         <div className='dashboard_card-container shadow'>
-          {console.log(order)}
         <img src={data.profileUrl} alt={data.name} style={{width: '50px', height: '50px', borderRadius: '50%', objectFit: 'contain', border: '1px solid rgb(224,209,92)'}}/>
         <p>{data.name }</p>
         <div>

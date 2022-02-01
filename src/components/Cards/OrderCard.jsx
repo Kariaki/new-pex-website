@@ -1,26 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../Button";
-import OrderModal from "../Modals/OrderModal";
-import OrderList from "./OrderList";
-import logogo from '../../assets/logogo.jpg';
 
 const OrderCard = ({order: {data}, status}) => {
 
-  const [open, setOpen] = useState(false);
-  const [clickedItem, setClickedItem] = useState([]);
-  
-  const handleOrderModal = (id) => {
-    setClickedItem(id)
-    setOpen(true)
-  }
-
   return (
     <React.Fragment>
-      <OrderModal open={open} setOpen={setOpen} clickedItem={clickedItem} status={status} data={data}/>
       <div className="order_card shadow">
       <div className="order_card-heading">
-        <span><h5 className="details">Order #{data.storeItem.id}</h5><span className="order_card-date">22, december 2022</span></span>
-        <h5 className="items">23</h5>
+        <div><h5 className="details">Order #{data.orderId && data.orderId.substring(0, 5)}</h5><span className="order_card-date">{data.date}</span></div>
+        <h5 className="items">{data.storeItem.vendorName ? data.storeItem.vendorName : 'Vendor name'}</h5>
       </div>
       <div className="order_items">
         <div className="order_item">
@@ -38,7 +26,7 @@ const OrderCard = ({order: {data}, status}) => {
       <hr />
       <div className="order_total">
         <h5>₦{data.price}</h5>
-        <Button text={status} bgColor="rgb(224,209,92)" color="black"  onClick={() => handleOrderModal(data.id)}/>
+        <Button text={status} bgColor="rgb(224,209,92)" color="black" />
       </div>
     </div>
     </React.Fragment>
