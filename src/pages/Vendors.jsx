@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import PageHeader from "../components/PageHeader";
 import VerifiedVendors from "../components/Tabs/VerifiedVendors";
 import UnverifiedVendors from "../components/Tabs/UnverifiedVendors";
-import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md';
+// import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md';
 
 import { db } from '../firebase-config';
 import { collection, query, orderBy, onSnapshot, where } from "firebase/firestore";
@@ -12,9 +12,27 @@ const Businesses = ({vendors}) => {
 
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState('');
+  const [verifiedVendors, setVerifiedVendors] = useState([]);
   const [unverifiedVendors, setUnverifiedVendors] = useState([]);
   const [activeTab, setActiveTab] = useState("tab1");
 
+//Get verified vendors
+useEffect(() => {
+    setLoading(true);
+    try {
+      const data = query(collection(db, "vendors"), where("verified", "==", true));
+      onSnapshot(data, (querySnapshot) => {
+        setVerifiedVendors( querySnapshot.docs.map((doc) => ({
+            data: doc.data(),
+          }))
+        );
+        setLoading(false);
+      });
+    } catch (error) {
+      setErr(error.message);
+      setLoading(false);
+    }
+  }, []);
 
 
 //Get unverified vendors from firebase
@@ -54,7 +72,7 @@ useEffect(() => {
           <li className={activeTab === "tab2" ? "active active-color" : ""} onClick={handleTab2}>Unverified</li>
         </ul>
       <div>
-        {activeTab === "tab1" ? <VerifiedVendors verifiedVendors={vendors}/> : <UnverifiedVendors unverifiedVendors={unverifiedVendors}/>}  
+        {activeTab === "tab1" ? <VerifiedVendors verifiedVendors={verifiedVendors}/> : <UnverifiedVendors unverifiedVendors={unverifiedVendors}/>}  
       </div>
 
       {/* <div className="pagination">
