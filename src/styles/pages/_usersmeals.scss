@@ -1,0 +1,49 @@
+.users_meals-container {
+  width: 100%;
+
+  .meals_tab-nav {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+
+    li {
+      padding-bottom: 10px;
+      list-style: none;
+      cursor: pointer;
+      text-align: center;
+      background-color: transparent;
+
+      &.active-color {
+        border-bottom: 3px solid $secondary-color;
+      }
+    }
+
+    @include sm {
+      overflow-x: auto;
+    }
+
+    @include md {
+      width: 80%;
+    }
+
+    @include lg {
+      width: 70%;
+    }
+  }
+
+  .meals_page-tabs {
+    width: 90%;
+    margin: 40px auto;
+
+    @include md {
+      width: 80%;
+    }
+
+    @include lg {
+      width: 70%;
+    }
+  }
+}
