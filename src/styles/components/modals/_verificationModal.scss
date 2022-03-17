@@ -1,0 +1,21 @@
+.details-wrapper {
+  border: 2px solid $secondary-color;
+  border-radius: 10px;
+  margin: 40px auto;
+  padding: 10px;
+
+  h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}
+
+.verification-prompt {
+  text-align: center;
+  margin-top: 40px;
+
+  h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+}

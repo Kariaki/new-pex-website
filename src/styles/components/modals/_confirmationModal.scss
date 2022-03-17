@@ -1,0 +1,19 @@
+.confirmation-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 20px auto;
+  padding: 20px;
+
+  h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

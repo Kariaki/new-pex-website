@@ -1,0 +1,43 @@
+.verified_vendor-modal {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+
+  &-heading {
+    display: flex;
+    align-items: center;
+
+    h4 {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .vendor-icon {
+        font-size: 28px;
+        background-color: $secondary-color;
+        padding: 5px;
+        border-radius: 50%;
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  & > * {
+    margin-bottom: 15px;
+  }
+}
