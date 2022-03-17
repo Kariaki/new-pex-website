@@ -1,0 +1,40 @@
+.meal_card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 250px;
+
+  img {
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .meal_card-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 10px;
+
+    h3 {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    &-subdetails {
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+      color: $gray;
+
+      span {
+        margin-right: 5px;
+      }
+    }
+
+    .dot {
+      font-size: 30px;
+    }
+  }
+}
