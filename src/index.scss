@@ -8,23 +8,33 @@
 
 //Components
 @import "./styles/components/header";
-@import "./styles/components/pageheader";
-@import "./styles/components/autherror";
+@import "./styles/components/pageHeader";
+@import "./styles/components/authError";
+@import "./styles/components/usersHeader";
 
 //Cards
-@import "./styles/components/ordercard";
-@import "./styles/components/verifiedvendorcard";
-@import "./styles/components/admincard";
-@import "./styles/components/dashboardcard";
+@import "./styles/components/cards/itemCard";
+@import "./styles/components/cards/orderCard";
+@import "./styles/components/cards/verifiedVendorCard";
+@import "./styles/components/cards/adminCard";
+@import "./styles/components/cards/dashboardCard";
+@import "./styles/components/cards/vendorCard";
+@import "./styles/components/cards/mealCard";
 
 //Tables
-@import "./styles/components/fourcolumns";
+@import "./styles/components/tables/fourColumns";
 
 //Modals
-@import "./styles/components/verifiedvendormodal";
-@import "./styles/components/verificationmodal";
-@import "./styles/components/confirmationmodal";
+@import "./styles/components/modals/orderModal";
+@import "./styles/components/modals/verifiedVendorModal";
+@import "./styles/components/modals/verificationModal";
+@import "./styles/components/modals/confirmationModal";
 
 //Pages
+@import "./styles/pages/usersVendors";
+@import "./styles/pages/usersMeals";
+@import "./styles/pages/vendorPage";
 @import "./styles/pages/dashboard";
 @import "./styles/pages/orders";
+@import "./styles/pages/usersSignup";
+@import "./styles/pages/usersSignin";
