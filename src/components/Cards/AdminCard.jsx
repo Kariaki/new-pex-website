@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {MdPerson,} from 'react-icons/md';
+import {MdPerson} from 'react-icons/md';
 import {BiPowerOff} from 'react-icons/bi';
 import { useAuth } from '../../contexts/authContext';
 

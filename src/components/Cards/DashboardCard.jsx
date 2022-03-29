@@ -3,25 +3,22 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../firebase-config';
 import { collection, query, onSnapshot, where } from "firebase/firestore";
 
-const DashboardCard = ({order: {data}}) => {
+const DashboardCard = ({order: {data}, vendor, totalPrice, totalQuantity}) => {
 
-  const [vendor, setVendor] = useState([]);
+  // const [vendor, setVendor] = useState([]);
 
 
-  useEffect(() => {
-      const res = query(
-        collection(db, "vendors"), where("verified", "==", true));
-      onSnapshot(res, (querySnapshot) => {
-        setVendor(
-          querySnapshot.docs.map((doc) => ({
-            data: doc.data(),
-          }))
-        );
-      });
-  }, []);
-
-// const totalPrice = orders.reduce((acc, curr)=> acc + curr.data.price, 0);
-// const totalQuantity = orders.reduce((acc, curr)=> acc + curr.data.quantity, 0);
+  // useEffect(() => {
+  //     const res = query(
+  //       collection(db, "vendors"), where("verified", "==", true));
+  //     onSnapshot(res, (querySnapshot) => {
+  //       setVendor(
+  //         querySnapshot.docs.map((doc) => ({
+  //           data: doc.data(),
+  //         }))
+  //       );
+  //     });
+  // }, []);
 
   return (
     <React.Fragment>
@@ -32,11 +29,11 @@ const DashboardCard = ({order: {data}}) => {
         <p>{data.storeItem.vendorName ? data.storeItem.vendorName : 'Vendor Name'}</p>
         <div>
           <h5>Sold out</h5>
-          <span>{data.quantity} {data.quantity > 1 ? 'orders' : 'order'}</span>
+          <span>{totalQuantity} {totalQuantity > 1 ? 'orders' : 'order'}</span>
         </div>
         <div>
           <h5>Pay</h5>
-          <span>₦{data.price}</span>
+          <span>₦{totalPrice}</span>
         </div>
         </div>
     </React.Fragment>
