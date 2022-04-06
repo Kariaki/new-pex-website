@@ -194,3 +194,34 @@
     color: $black;
   }
 }
+
+.vendor_tab-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.meal_tab-grid {
+  width: 80%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+
+  @include sm {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

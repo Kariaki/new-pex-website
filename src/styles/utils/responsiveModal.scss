@@ -1,0 +1,19 @@
+@import "../utils/breakpoints";
+
+.customModal {
+  border-radius: 15px;
+  width: 90%;
+  margin: 20px auto;
+
+  @include sm {
+    width: 80%;
+  }
+
+  @include md {
+    width: 70%;
+  }
+
+  @include lg {
+    width: 50%;
+  }
+}
