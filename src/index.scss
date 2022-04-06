@@ -11,6 +11,12 @@
 @import "./styles/components/pageHeader";
 @import "./styles/components/authError";
 @import "./styles/components/usersHeader";
+@import "./styles/components/orderSummary";
+
+//Steps
+@import "./styles/components/steps/reviewOrder";
+@import "./styles/components/steps/placeOrder";
+@import "./styles/components/steps/yourDetails";
 
 //Cards
 @import "./styles/components/cards/itemCard";
@@ -20,6 +26,7 @@
 @import "./styles/components/cards/dashboardCard";
 @import "./styles/components/cards/vendorCard";
 @import "./styles/components/cards/mealCard";
+@import "./styles/components/cards/cartItem";
 
 //Tables
 @import "./styles/components/tables/fourColumns";
@@ -38,3 +45,4 @@
 @import "./styles/pages/orders";
 @import "./styles/pages/usersSignup";
 @import "./styles/pages/usersSignin";
+@import "./styles/pages/checkout";
