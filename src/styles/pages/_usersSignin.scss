@@ -1,0 +1,105 @@
+.users_signin {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > * {
+    margin-bottom: 20px;
+  }
+
+  @include sm {
+    width: 70%;
+  }
+
+  @include md {
+    width: 50%;
+  }
+
+  @include lg {
+    width: 35%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-weight: 500;
+    span {
+      a {
+        color: $secondary-color;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    border-radius: 5px;
+    background-color: $white;
+    border: none;
+    outline: none;
+    height: 40px;
+    padding: 5px 10px;
+  }
+
+  button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 45px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+  }
+
+  .users_signin-google {
+    background-color: $white;
+    font-size: 1rem;
+  }
+
+  .users_signin-submit {
+    background-color: $secondary-color;
+    font-size: 1.2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+    align-self: flex-end;
+    font-weight: 400;
+  }
+
+  .horizontal-line {
+    position: relative;
+  }
+
+  p::before {
+    content: " ";
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    bottom: 50%;
+    left: -80px;
+    background-color: $secondary-color;
+  }
+
+  p::after {
+    content: " ";
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    bottom: 50%;
+    right: -80px;
+    background-color: $secondary-color;
+  }
+}
