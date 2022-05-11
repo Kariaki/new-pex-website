@@ -1,0 +1,129 @@
+.users_signup {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > * {
+    margin-bottom: 20px;
+  }
+
+  @include sm {
+    width: 70%;
+  }
+
+  @include md {
+    width: 50%;
+  }
+
+  @include lg {
+    width: 35%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-weight: 500;
+    span {
+      a {
+        color: $secondary-color;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    border-radius: 5px;
+    background-color: $white;
+    border: none;
+    outline: none;
+    height: 40px;
+    padding: 5px 10px;
+  }
+
+  .name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 48%;
+    }
+  }
+
+  .phone {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    input:first-child {
+      width: 20%;
+    }
+
+    input:last-child {
+      width: 70%;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 45px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+  }
+
+  .users_signup-google {
+    background-color: $white;
+    font-size: 1rem;
+  }
+
+  .users_signup-submit {
+    background-color: $secondary-color;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .horizontal-line {
+    position: relative;
+  }
+
+  p::before {
+    content: " ";
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    bottom: 50%;
+    left: -80px;
+    background-color: $secondary-color;
+  }
+
+  p::after {
+    content: " ";
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    bottom: 50%;
+    right: -80px;
+    background-color: $secondary-color;
+  }
+
+  h5 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+}
