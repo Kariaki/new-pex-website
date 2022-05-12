@@ -10,12 +10,12 @@ const FiveColums = ({col1, col2, col3, col4, data}) => {
           <th>{col4}</th>
         </tr>
         <div className="hr"></div>
-        {data.map(row => (
+        {data?.map(row => (
           <tr>
-            <td>{row.data.name}</td>
-            <td>{row.data.contactDetails.phone}</td>
-            <td>{row.data.contactDetails.email ? row.data.contactDetails.email : 'johndoe@gmail.com'}</td>
-            <td>{row.data.deliveryAddress}</td>
+            <td>{row?.name}</td>
+            <td>{row?.contactDetails?.phone}</td>
+            <td>{row?.contactDetails?.email ? row?.contactDetails?.email : 'johndoe@gmail.com'}</td>
+            <td>{row?.deliveryAddress}</td>
           </tr>
         ))}
       </table>
