@@ -12,16 +12,18 @@ const CartItem = ({ item }) => {
 
   return (
     <div className='cart_item'>
-      <img src={item.storeItem.imageUrl} alt={item.storeItem.name} className="shadow" />
+      <img src={item?.storeItem?.imageUrl} alt={item.storeItem.name} className="shadow" />
       <div className="cart_item-description">
-        <h4>{item.storeItem.name}</h4>
+        <h4>{item?.storeItem?.name}</h4>
         <p>{item.storeItem.description}Lorem ipsum dolor sit amet consectetur</p>
       </div>
       <div className="cart_item-price">
-        <h3>{item.quantity}</h3>
-        <p>₦{`${item.quantity}` * `${item.price}`}</p>
+        <h3>{item?.quantity}</h3>
+        <p>₦{(`${item?.quantity}` * `${item.price}`).toLocaleString()}</p>
       </div>
-      <button onClick={() => handleDeleteItem(item)}><MdDelete size={15} color="white"/></button>
+      <button onClick={() => handleDeleteItem(item)}>
+        <MdDelete size={15} color="white"/>
+      </button>
     </div>
   )
 }
