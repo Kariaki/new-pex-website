@@ -12,6 +12,7 @@
 @import "./styles/components/authError";
 @import "./styles/components/usersHeader";
 @import "./styles/components/orderSummary";
+@import "./styles/components/footer";
 
 //Steps
 @import "./styles/components/steps/reviewOrder";
@@ -27,6 +28,8 @@
 @import "./styles/components/cards/vendorCard";
 @import "./styles/components/cards/mealCard";
 @import "./styles/components/cards/cartItem";
+@import "./styles/components/cards/drawerItem";
+
 
 //Tables
 @import "./styles/components/tables/fourColumns";
@@ -46,3 +49,4 @@
 @import "./styles/pages/usersSignup";
 @import "./styles/pages/usersSignin";
 @import "./styles/pages/checkout";
+@import "./styles/pages/errorPage";
