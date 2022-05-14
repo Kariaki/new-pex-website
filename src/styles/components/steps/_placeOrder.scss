@@ -1,0 +1,51 @@
+.place_order {
+  width: 80%;
+  margin: 60px auto 20px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  &-details-left {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+
+    .customer-information,
+    .delivery-address {
+      h4 {
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+
+      p {
+        margin-bottom: 10px;
+        font-weight: 200;
+        font-size: 0.8rem;
+      }
+    }
+
+    .horizontal-line {
+      height: 1px;
+      margin: 10px 0;
+      background-color: $secondary-color;
+      width: 100%;
+
+      @include lg {
+        width: 90%;
+      }
+    }
+
+    @include md {
+      margin-right: 20px;
+    }
+  }
+
+  &-details-right {
+    flex: 1;
+  }
+}
