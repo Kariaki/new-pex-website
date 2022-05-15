@@ -2,7 +2,7 @@ import React,{ useState, useEffect } from "react";
 import OrderCard from "../Cards/OrderCard";
 
 import { db } from "../../firebase-config";
-import { collection, query, where, orderBy, onSnapshot } from "firebase/firestore";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
 
 const CancelledOrders = () => {
 
@@ -15,9 +15,7 @@ const CancelledOrders = () => {
   try {
     const data = query(collection(db, 'orders'), where('orderStates', '==', 'CANCELED'))
     onSnapshot(data, (querySnapshot) => {
-    setOrders(querySnapshot.docs.map(doc => ({
-      data: doc.data()
-    })))
+    setOrders(querySnapshot.docs.map(doc => doc.data()))
     setLoading(false);
   })
   } catch (error) {
@@ -36,9 +34,9 @@ if(err){
 
   return (
     <div className="grid_container grid_size">
-      {orders && orders.map(order => (
-        <React.Fragment>
-          <OrderCard order={order} key={order.id} status="Cancelled" />
+      {orders?.map(order => (
+        <React.Fragment key={order.id}>
+          <OrderCard order={order}  status="Cancelled" />
         </React.Fragment>
       ))}
     </div>
