@@ -1,0 +1,185 @@
+.users_header {
+  background-color: $black;
+  color: $white;
+
+  .cart_drawer {
+    position: absolute;
+    width: 80%;
+    z-index: 99;
+    background-color: $white;
+    color: $black;
+    right: 2vw;
+    top: 2vh;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+
+    @include md {
+      width: 60%;
+    }
+
+    @include lg {
+      width: 40%;
+    }
+
+    &-close {
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      h4 {
+        font-weight: 200;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+    }
+
+    &-horizontal-line {
+      height: 1px;
+      margin: 10px 0;
+      background-color: $secondary-color;
+      width: 100%;
+    }
+
+    &-checkout {
+      margin-inline: auto;
+
+      div {
+        color: $gray;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px auto;
+      }
+
+      button {
+        cursor: pointer;
+        background-color: $secondary-color;
+        color: $black;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        text-align: center;
+        width: 100%;
+        height: 40px;
+      }
+    }
+  }
+
+  span {
+    a {
+      color: $white;
+    }
+  }
+
+  nav {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include md {
+      width: 80%;
+      padding: 20px 10px;
+    }
+
+    @include lg {
+      width: 70%;
+    }
+
+    .nav_links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        margin-right: 20px;
+        font-size: 1.4rem;
+        font-weight: 900;
+
+        @include md {
+          font-size: 2rem;
+          margin-right: 40px;
+        }
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          list-style: none;
+          margin-right: 20px;
+          text-transform: uppercase;
+
+          @include md {
+            margin-right: 40px;
+          }
+
+          a {
+            text-decoration: none;
+            color: $white;
+            font-size: 0.8rem;
+
+            @include md {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .action_btns {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin-left: 20px;
+        background-color: $secondary-color;
+        color: $black;
+
+        @include md {
+          font-size: 1.4rem;
+          margin-left: 40px;
+        }
+      }
+
+      .profile {
+        border-radius: 30px;
+        padding: 3px 5px;
+
+        p {
+          font-weight: 400;
+          font-size: 1rem;
+        }
+
+        @include md {
+          padding: 6px 10px;
+        }
+      }
+
+      .cart {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        padding: 3px 10px;
+
+        span {
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+
+        @include md {
+          border-radius: 15px;
+          padding: 4px 10px;
+        }
+      }
+    }
+  }
+}
+
+
