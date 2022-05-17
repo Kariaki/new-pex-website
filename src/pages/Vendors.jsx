@@ -6,7 +6,7 @@ import UnverifiedVendors from "../components/Tabs/UnverifiedVendors";
 // import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from 'react-icons/md';
 
 import { db } from '../firebase-config';
-import { collection, query, orderBy, onSnapshot, where } from "firebase/firestore";
+import { collection, query, onSnapshot, where } from "firebase/firestore";
 
 const Businesses = ({vendors}) => {
 
