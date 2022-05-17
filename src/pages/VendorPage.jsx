@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import UsersHeader from '../components/UsersHeader';
+import Footer from '../components/Footer';
 import Breakfast from '../components/Tabs/Breakfast';
 import Snacks from '../components/Tabs/Snacks';
 import Drinks from '../components/Tabs/Drinks';
@@ -125,6 +126,7 @@ const VendorPage = () => {
             <Food food={food} setOpen={setOpen} setClickId={setClickId} setItem={setItem} loading={loading}/>}
         </div>
       </div>
+      <Footer />
     </React.Fragment>
   )
 }
