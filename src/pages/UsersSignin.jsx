@@ -49,7 +49,7 @@ const UsersSignin = () => {
           <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email"/>
           <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password"/>
 
-          <Link to="/forgot-password">Forgot your Password?</Link>
+          <Link to="/users/password-reset">Forgot your Password?</Link>
 
           <button type="submit" className='users_signin-submit'>{loading ? 'Loading...' : 'Sign In'}</button>
           
