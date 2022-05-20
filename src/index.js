@@ -8,6 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AuthProvider from "./contexts/authContext";
+import CartProvider from "./contexts/cartContext";
 
 toast.configure();
 
@@ -27,7 +28,9 @@ ReactDOM.render(
     <Router>
       <ThemeProvider theme={theme}>
         <AuthProvider>
-          <App />
+          <CartProvider>
+            <App />
+          </CartProvider>
           <ToastContainer closeButton={true} position="top-center" />
         </AuthProvider>
       </ThemeProvider>
